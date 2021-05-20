@@ -5,7 +5,8 @@ class ApplicationController < ActionController::Base
   end
 
   def goodbye
-    render html:"¡Goodbye, Work¡"
+    str = ('a'..'z').to_a.shuffle[0..7].join
+    render html: str
   end
 
 end
